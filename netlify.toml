@@ -1,0 +1,39 @@
+######################################
+# BUILD
+######################################
+[build]
+  publish   = "public"            # ← tu carpeta con el html
+  functions = "netlify/functions" # ← las funciones
+
+######################################
+# STATIC ASSETS DEL SPACE
+######################################
+[[redirects]]
+  from   = "/hfproxy/static/*"
+  to     = "https://alexanderad-live-market-analysis-for-day-trading.hf.space/static/:splat"
+  status = 200
+  force  = true
+
+######################################
+# PROXY A LA FUNCIÓN
+######################################
+# 1) añade barra final a /hfproxy
+[[redirects]]
+  from   = "/hfproxy"
+  to     = "/hfproxy/"
+  status = 200
+  force  = true
+
+# 2) /hfproxy/  →  función (SIN barra final)
+[[redirects]]
+  from   = "/hfproxy/"
+  to     = "/.netlify/functions/hf-proxy"
+  status = 200
+  force  = true
+
+# 3) cualquier sub‑ruta /hfproxy/*  →  función
+[[redirects]]
+  from   = "/hfproxy/*"
+  to     = "/.netlify/functions/hf-proxy/:splat"
+  status = 200
+  force  = true
