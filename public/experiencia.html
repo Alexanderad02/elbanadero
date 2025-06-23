@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiencia - La Ruta del Bañadero</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#2E7D32',
+                        'secondary': '#FF9800',
+                        'accent': '#8BC34A',
+                        'dark': '#1B5E20',
+                        'light': '#F1F8E9'
+                    },
+                    fontFamily: {
+                        'sans': ['Poppins', 'sans-serif'],
+                        'heading': ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .nature-bg {
+            background-image: linear-gradient(to bottom, rgba(241, 248, 233, 0.9), rgba(241, 248, 233, 0.9)), url('https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+        }
+    </style>
+</head>
+<body class="bg-light font-sans">
+    <!-- Header -->
+    <header class="fixed w-full z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 flex justify-between items-center py-4">
+            <div class="flex items-center">
+                <i class="fas fa-leaf text-primary text-3xl mr-2"></i>
+                <h1 class="text-2xl font-bold text-primary font-heading">La Ruta del Bañadero</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-dark hover:text-secondary font-medium">Inicio</a>
+                <a href="experiencia.html" class="text-dark hover:text-secondary font-medium">Experiencia</a>
+                <a href="actividades.html" class="text-dark hover:text-secondary font-medium">Actividades</a>
+                <a href="galeria.html" class="text-dark hover:text-secondary font-medium">Galería</a>
+                <a href="contacto.html" class="text-dark hover:text-secondary font-medium">Contacto</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-dark text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4">
+            <a href="index.html" class="block py-2 text-dark hover:text-secondary">Inicio</a>
+            <a href="experiencia.html" class="block py-2 text-dark hover:text-secondary">Experiencia</a>
+            <a href="actividades.html" class="block py-2 text-dark hover:text-secondary">Actividades</a>
+            <a href="galeria.html" class="block py-2 text-dark hover:text-secondary">Galería</a>
+            <a href="contacto.html" class="block py-2 text-dark hover:text-secondary">Contacto</a>
+        </div>
+    </header>
+
+    <!-- Experience Section -->
+    <section class="py-20 nature-bg">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4 font-heading">La Experiencia Bañadero</h2>
+                <div class="h-1 w-24 bg-secondary mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-dark mb-4 font-heading">Conecta con la naturaleza dominicana</h3>
+                    <p class="text-gray-700 mb-6">La Ruta del Bañadero te invita a vivir una experiencia ecoturística única en la exuberante selva de República Dominicana. Nuestro proyecto ofrece una combinación perfecta de aventura, aprendizaje y conexión con la naturaleza.</p>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-primary text-white rounded-full p-3 mr-4">
+                                <i class="fas fa-route text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-dark mb-1">La Ruta</h4>
+                                <p class="text-gray-700">Explora senderos ancestrales en burro o caminando, descubriendo paisajes impresionantes y la flora local.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-primary text-white rounded-full p-3 mr-4">
+                                <i class="fas fa-campground text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-dark mb-1">Alojamiento en la Selva</h4>
+                                <p class="text-gray-700">Duerme bajo las estrellas en cabañas ecológicas, rodeado de los sonidos de la naturaleza.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-primary text-white rounded-full p-3 mr-4">
+                                <i class="fas fa-seedling text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-dark mb-1">Sabores Auténticos</h4>
+                                <p class="text-gray-700">Disfruta de nuestros productos locales: café de altura, mangos y maracuyá cultivados con amor.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="img/cafe.jpg" alt="Café dominicano" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h4 class="font-bold text-lg text-dark">Café de Altura</h4>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="img/mango.jpg" alt="Mangos dominicanos" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h4 class="font-bold text-lg text-dark">Mangos Tropicales</h4>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="img/maracuya.jpg" alt="Maracuyá" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h4 class="font-bold text-lg text-dark">Maracuyá Fresco</h4>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="img/cabaña.jpg" alt="Cabañas ecológicas" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h4 class="font-bold text-lg text-dark">Cabañas Ecológicas</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-leaf text-accent text-3xl mr-2"></i>
+                        <h3 class="text-2xl font-bold font-heading">La Ruta del Bañadero</h3>
+                    </div>
+                    <p class="text-gray-300">Ecoturismo sostenible en el corazón de la selva dominicana. Descubre nuestros sabores y tradiciones.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 font-heading">Enlaces Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-accent transition">Inicio</a></li>
+                        <li><a href="experiencia.html" class="text-gray-300 hover:text-accent transition">Experiencia</a></li>
+                        <li><a href="actividades.html" class="text-gray-300 hover:text-accent transition">Actividades</a></li>
+                        <li><a href="galeria.html" class="text-gray-300 hover:text-accent transition">Galería</a></li>
+                        <li><a href="contacto.html" class="text-gray-300 hover:text-accent transition">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 font-heading">Actividades</h4>
+                    <ul class="space-y-2">
+                        <li><a href="actividades.html" class="text-gray-300 hover:text-accent transition">Ruta en Burro</a></li>
+                        <li><a href="actividades.html" class="text-gray-300 hover:text-accent transition">Talleres Culturales</a></li>
+                        <li><a href="actividades.html" class="text-gray-300 hover:text-accent transition">Noche en la Selva</a></li>
+                        <li><a href="actividades.html" class="text-gray-300 hover:text-accent transition">Degustación de Café</a></li>
+                        <li><a href="actividades.html" class="text-gray-300 hover:text-accent transition">Recolección de Frutas</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 font-heading">Suscríbete</h4>
+                    <p class="text-gray-300 mb-4">Recibe noticias y promociones especiales.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Tu correo" class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-gray-800">
+                        <button class="bg-secondary hover:bg-orange-600 text-white px-4 rounded-r-lg transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+                <p>© 2023 La Ruta del Bañadero. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
