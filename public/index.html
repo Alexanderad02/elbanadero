@@ -49,6 +49,13 @@
                 <a href="galeria.html" class="text-dark hover:text-secondary font-medium">Galería</a>
                 <a href="contacto.html" class="text-dark hover:text-secondary font-medium">Contacto</a>
             </nav>
+            <div class="flex items-center space-x-2">
+                <a href="index.html"><img src="img/flag_es.png" alt="Español" class="h-6"></a>
+                <a href="index_en.html"><img src="img/flag_en.png" alt="English" class="h-6"></a>
+                <a href="index_de.html"><img src="img/flag_de.png" alt="Deutsch" class="h-6"></a>
+                <a href="index_fr.html"><img src="img/flag_fr.png" alt="Français" class="h-6"></a>
+                <a href="index_it.html"><img src="img/flag_it.png" alt="Italiano" class="h-6"></a>
+            </div>
             <div class="md:hidden">
                 <button id="menu-btn" class="text-dark text-2xl">
                     <i class="fas fa-bars"></i>
@@ -61,6 +68,13 @@
             <a href="actividades.html" class="block py-2 text-dark hover:text-secondary">Actividades</a>
             <a href="galeria.html" class="block py-2 text-dark hover:text-secondary">Galería</a>
             <a href="contacto.html" class="block py-2 text-dark hover:text-secondary">Contacto</a>
+            <div class="flex space-x-2 mt-2">
+                <a href="index.html"><img src="img/flag_es.png" alt="Español" class="h-6"></a>
+                <a href="index_en.html"><img src="img/flag_en.png" alt="English" class="h-6"></a>
+                <a href="index_de.html"><img src="img/flag_de.png" alt="Deutsch" class="h-6"></a>
+                <a href="index_fr.html"><img src="img/flag_fr.png" alt="Français" class="h-6"></a>
+                <a href="index_it.html"><img src="img/flag_it.png" alt="Italiano" class="h-6"></a>
+            </div>
         </div>
     </header>
 
@@ -124,7 +138,7 @@
     <script>
         // Mobile menu toggle
         const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
+        const  mobileMenu = document.getElementById('mobile-menu');
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
